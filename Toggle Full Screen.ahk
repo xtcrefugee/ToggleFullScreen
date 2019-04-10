@@ -69,6 +69,9 @@ superMaximize(stackType) {
 		WinGetPos, orig_%winId%_x, orig_%winId%_y, orig_%winId%_width, orig_%winId%_height ; store the old bounds
 		SysGet, MWA, MonitorWorkArea
 		SysGet, windowPadding, 32, 33
+		; set below to 1 if you don't want the top 1px border
+		; i.e. on Chrome windows, else set to 0
+		topWindowBorder := 1
 		if (stackType = 0) {
 			; full screen
 			windowX := MWALeft-windowPadding
@@ -82,8 +85,9 @@ superMaximize(stackType) {
 			windowX := (MWARight//2)-windowPadding
 			windowW := (MWARight//2)+(windowPadding*2)
 		}
-		windowH := MWABottom+windowPadding
-		WinMove, , , %windowX%, %MWATop%, %windowW%, %windowH%
+		windowY := MWATop-topWindowBorder
+		windowH := MWABottom+windowPadding+topWindowBorder
+		WinMove, , , %windowX%, %windowY%, %windowW%, %windowH%
 		isSuperMaximized_%winId% = 1
 	}
 }

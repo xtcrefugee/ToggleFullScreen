@@ -2,7 +2,7 @@
  * AHK Toggle Full Screen
  * (Based on BoD winsupermaximize v1.01)
  *
- * V1.1
+ * V1.1a
  */
 #Persistent
 #SingleInstance Ignore

@@ -3,4 +3,6 @@ An AutoHotkey script, optionally compiled as an executable using Ahk2Exe 1.1.28,
 
 The function is bound to Win-F11 by default, but as it's designed to replicate the taskbar feature the intended use is to just double click the icon to perform the toggle, so you should set Toggle Full Screen.exe to always appear on your taskbar for ease of use.
 
+Note 1.2 is an alternate not a revision, it removes the restore feature and adds top and bottom stacking. I've been using this for years and forgot to upload it!
+
 As this is a standard AutoHotkey script you may wish to add other AutoHotkey commands as needed and compile your own version. Based on code from winsupermaximize, which is public domain: https://code.google.com/archive/p/winsupermaximize/
